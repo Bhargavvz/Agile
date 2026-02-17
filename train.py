@@ -25,7 +25,8 @@ from typing import Dict, List, Optional
 import numpy as np
 import torch
 import torch.nn as nn
-from torch.cuda.amp import GradScaler, autocast
+from torch.amp import autocast
+from torch.cuda.amp import GradScaler
 from torch.optim import AdamW
 from torch.optim.lr_scheduler import LambdaLR
 
@@ -167,7 +168,7 @@ class Trainer:
 
             optimizer.zero_grad(set_to_none=True)
 
-            with autocast(device_type="cuda", dtype=torch.bfloat16, enabled=config.USE_AMP):
+            with autocast("cuda", dtype=torch.bfloat16, enabled=config.USE_AMP):
                 mu, sigma = self.model(input_ids, attention_mask, features)
                 loss = self.criterion(mu, sigma, targets)
 

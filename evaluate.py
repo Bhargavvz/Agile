@@ -20,7 +20,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 import seaborn as sns
 import torch
-from torch.cuda.amp import autocast
+from torch.amp import autocast
 
 import config
 from dataset import AgileCostDataset, get_dataloaders
@@ -106,7 +106,7 @@ def predict_with_uncertainty(
                 attention_mask = batch["attention_mask"].to(device, non_blocking=True)
                 features = batch["numeric_features"].to(device, non_blocking=True)
 
-                with autocast(device_type="cuda", dtype=torch.bfloat16, enabled=config.USE_AMP):
+                with autocast("cuda", dtype=torch.bfloat16, enabled=config.USE_AMP):
                     mu, sigma = model(input_ids, attention_mask, features)
 
                 pass_mu.append(mu.cpu().numpy())

@@ -19,7 +19,7 @@ from typing import Dict
 
 import numpy as np
 import torch
-from torch.cuda.amp import autocast
+from torch.amp import autocast
 from transformers import AutoTokenizer
 
 import config
@@ -183,7 +183,7 @@ def predict_single(
 
     with torch.no_grad():
         for _ in range(config.MC_DROPOUT_PASSES):
-            with autocast(device_type="cuda", dtype=torch.bfloat16, enabled=config.USE_AMP and device.type == "cuda"):
+            with autocast("cuda", dtype=torch.bfloat16, enabled=config.USE_AMP and device.type == "cuda"):
                 mu, sigma = model(input_ids, attention_mask, features_tensor)
             mu_samples.append(mu.cpu().item())
             sigma_samples.append(sigma.cpu().item())
