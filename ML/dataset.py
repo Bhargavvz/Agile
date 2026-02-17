@@ -16,7 +16,7 @@ import torch
 from torch.utils.data import Dataset, DataLoader
 from transformers import AutoTokenizer
 
-import config
+import ML.config
 
 
 # ──────────────────────────── helpers ────────────────────────────────────

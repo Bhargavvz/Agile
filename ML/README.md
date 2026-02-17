@@ -141,7 +141,7 @@ python analysis.py
 │                                                            │
 │  Output                                                    │
 │  ├── μ Head: 1088 → 512 → 256 → 1  (predicted cost)        │
-│  └── σ Head: 1088 → 256 → 1        (uncertainty, softplus)  │
+│  └── σ Head: 1088 → 256 → 1       (uncertainty, softplus)  │
 └────────────────────────────────────────────────────────────┘
 ```
 

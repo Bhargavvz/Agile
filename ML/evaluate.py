@@ -22,9 +22,9 @@ import seaborn as sns
 import torch
 from torch.amp import autocast
 
-import config
-from dataset import AgileCostDataset, get_dataloaders
-from model import AgileCostEstimator
+import ML.config
+from ML.dataset import AgileCostDataset, get_dataloaders
+from ML.model import AgileCostEstimator
 
 # plot style
 plt.rcParams.update({

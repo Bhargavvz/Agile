@@ -21,9 +21,9 @@ import seaborn as sns
 import torch
 from torch.cuda.amp import autocast
 
-import config
-from dataset import AgileCostDataset, get_dataloaders
-from model import AgileCostEstimator
+import ML.config
+from ML.dataset import AgileCostDataset, get_dataloaders
+from ML.model import AgileCostEstimator
 
 plt.rcParams.update({
     "figure.figsize": (12, 8),

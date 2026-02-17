@@ -22,9 +22,9 @@ import torch
 from torch.amp import autocast
 from transformers import AutoTokenizer
 
-import config
-from dataset import AgileCostDataset, FeatureScaler, TargetScaler
-from model import AgileCostEstimator
+import ML.config
+from ML.dataset import AgileCostDataset, FeatureScaler, TargetScaler
+from ML.model import AgileCostEstimator
 
 
 # ──────────────────────────── load model ─────────────────────────────────
