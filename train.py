@@ -208,8 +208,8 @@ class Trainer:
 
             total_loss += loss.item()
             n_batches += 1
-            all_preds.append(mu.cpu().numpy())
-            all_targets.append(targets.cpu().numpy())
+            all_preds.append(mu.float().cpu().numpy())
+            all_targets.append(targets.float().cpu().numpy())
 
         avg_loss = total_loss / max(n_batches, 1)
         preds = np.concatenate(all_preds)

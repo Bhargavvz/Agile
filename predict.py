@@ -185,8 +185,8 @@ def predict_single(
         for _ in range(config.MC_DROPOUT_PASSES):
             with autocast("cuda", dtype=torch.bfloat16, enabled=config.USE_AMP and device.type == "cuda"):
                 mu, sigma = model(input_ids, attention_mask, features_tensor)
-            mu_samples.append(mu.cpu().item())
-            sigma_samples.append(sigma.cpu().item())
+            mu_samples.append(mu.float().cpu().item())
+            sigma_samples.append(sigma.float().cpu().item())
 
     mu_mean = np.mean(mu_samples)
     mu_std = np.std(mu_samples)          # epistemic uncertainty

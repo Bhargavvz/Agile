@@ -109,8 +109,8 @@ def predict_with_uncertainty(
                 with autocast("cuda", dtype=torch.bfloat16, enabled=config.USE_AMP):
                     mu, sigma = model(input_ids, attention_mask, features)
 
-                pass_mu.append(mu.cpu().numpy())
-                pass_sigma.append(sigma.cpu().numpy())
+                pass_mu.append(mu.float().cpu().numpy())
+                pass_sigma.append(sigma.float().cpu().numpy())
 
                 if pass_idx == 0:
                     pass_targets.append(batch["target"].numpy())
