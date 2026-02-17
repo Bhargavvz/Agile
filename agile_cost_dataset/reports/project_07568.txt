@@ -1,0 +1,90 @@
+========================================================================
+  PROJECT REPORT — project_07568
+  Domain        : AI Platform
+  Complexity    : Medium
+  Team Size     : 8    Duration : 8 months
+========================================================================
+1. Project Overview
+
+This project addresses a critical challenge in the AI Platform domain. Organisations cannot efficiently label, version, and track large-scale training datasets across multiple projects. To respond to this challenge, the project team has set a clear business goal: Offer scalable, GPU-backed inference infrastructure that handles burst traffic seamlessly.
+
+The primary target users for this system are data scientists and ML engineers. The solution is designed to streamline their workflows and deliver measurable value within 8 months of development.
+
+2. Agile Framework
+
+The project follows the Scrum framework, which organises work into fixed-length iterations known as sprints. Each sprint lasts 2 weeks, giving the team a steady cadence for planning, development, review, and retrospective activities.
+
+Scrum roles have been clearly defined. A Product Owner is responsible for maintaining and prioritising the product backlog in collaboration with stakeholders. A Scrum Master facilitates ceremonies, removes impediments, and coaches the team on Agile practices. The Development Team of 8 members is cross-functional, comprising front-end and back-end developers, QA engineers, and — where needed — DevOps specialists.
+
+The incremental delivery approach ensures that a potentially shippable product increment is available at the end of every sprint. This allows stakeholders to provide feedback early and often, reducing the cost of late-stage requirement changes.
+
+3. Product Backlog & User Stories
+
+The product backlog contains 20 user stories that have been identified, estimated, and prioritised during initial backlog grooming sessions. Story-point estimates follow the Fibonacci-like scale (1, 2, 3, 5, 8, 13) and reflect the relative complexity, effort, and uncertainty of each item. The average story-point value across the backlog is approximately 5.0.
+
+  - As a data scientist, I want to compare experiment metrics side by side so that I can select the best model objectively. [2 story points]
+  - As a data scientist, I want to integrate with feature stores so that feature engineering work is reusable. [2 story points]
+  - As a data scientist, I want to access a pre-trained model hub so that I can fine-tune instead of training from scratch. [3 story points]
+  - As a admin, I want to manage multi-region model deployment so that latency for global users is minimised. [13 story points]
+  - As a ML engineer, I want to containerise model artefacts so that deployment is portable across environments. [5 story points]
+  - As a admin, I want to track GPU utilisation in real time so that idle resources are reclaimed promptly. [13 story points]
+  - As a data scientist, I want to visualise feature importance so that model decisions are explainable. [8 story points]
+  - As a admin, I want to define data-retention policies so that storage costs are optimised. [8 story points]
+  - As a ML engineer, I want to log prediction requests and responses so that debugging production issues is straightforward. [5 story points]
+  - As a admin, I want to generate cost-per-project reports so that team budgets are transparent. [3 story points]
+  - As a ML engineer, I want to configure auto-scaling for inference endpoints so that traffic spikes are handled smoothly. [13 story points]
+  - As a ML engineer, I want to implement canary deployments so that faulty model versions are caught early. [2 story points]
+  - As a admin, I want to configure role-based project access so that sensitive data is protected. [5 story points]
+  - As a data scientist, I want to share notebooks with team members so that collaboration on analysis is seamless. [1 story points]
+  - As a data scientist, I want to run hyperparameter sweeps so that optimal configurations are found efficiently. [2 story points]
+  - As a ML engineer, I want to set up A/B testing for models so that I can validate improvements before full rollout. [2 story points]
+  - As a data scientist, I want to upload and version datasets so that experiments are reproducible. [13 story points]
+  - As a admin, I want to integrate with SSO and identity providers so that enterprise onboarding is simplified. [8 story points]
+  - As a ML engineer, I want to automate model retraining on a schedule so that models stay current as data evolves. [13 story points]
+  - As a ML engineer, I want to serve models with low-latency gRPC so that real-time applications meet SLA targets. [3 story points]
+
+4. Sprint Planning & Velocity
+
+The project spans 8 months and is divided into 16 sprints of 2 weeks each. Based on the team's estimated capacity and historical data from similar projects, the anticipated velocity is approximately 32.0 story points per sprint.
+
+During sprint planning, the Product Owner presents the highest-priority items from the backlog, and the Development Team selects stories whose combined estimates fit within the sprint velocity. Any incomplete stories are carried over to the next sprint after a brief retrospective discussion to identify the root cause.
+
+Sprint reviews provide stakeholders with a live demonstration of new features. Sprint retrospectives capture lessons learned and actionable improvements, fostering continuous process enhancement.
+
+5. System Architecture & Modules
+
+A modular architecture separates concerns across well-defined service boundaries. This balances development velocity with the flexibility needed to accommodate growing feature requirements as the product matures.
+
+The following core modules have been identified:
+
+  - User & Role Management: Role-based access control with multi-tenancy support
+  - API Gateway: Centralised routing, rate limiting, and request validation
+  - Notification Service: Email, SMS, and in-app notification delivery engine
+  - Analytics Engine: Aggregated dashboards with drill-down and date-range filtering
+  - Payment Integration: Secure payment processing via third-party gateway
+  - Search Module: Full-text search with filters and pagination
+
+6. Technology Stack
+
+Frontend : Next.js
+Backend  : ASP.NET Core
+Database : MongoDB
+Cloud    : GCP Cloud Run
+
+The stack is intentionally kept straightforward — no AI, ML, or real-time components are required. This positions the technical difficulty at 'Basic', keeping the cost-per-hour and effort multipliers at their baseline values.
+
+7. Risk & Requirement Volatility
+
+The overall risk level for this project is assessed as 'Medium', and requirement volatility is rated 'Medium'. Stakeholder priorities are expected to shift during the course of the project, which may lead to backlog re-prioritisation and scope adjustments across sprints. 
+
+Key risks identified:
+  - Third-party API changes could require interface rework.
+  - Stakeholder requirement revisions expected after UAT phase.
+  - Team may face learning-curve delays with new framework adoption.
+
+Mitigation strategies adopted by the team:
+  - Automate regression tests to catch breakages from dependency updates.
+  - Use contract testing for third-party API integrations.
+  - Implement feature flags to isolate risky changes behind toggles.
+  - Conduct bi-weekly stakeholder review sessions to catch requirement drift.
+

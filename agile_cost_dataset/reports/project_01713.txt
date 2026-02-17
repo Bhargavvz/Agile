@@ -1,0 +1,94 @@
+========================================================================
+  PROJECT REPORT — project_01713
+  Domain        : IoT
+  Complexity    : High
+  Team Size     : 8    Duration : 9 months
+========================================================================
+1. Project Overview
+
+This project addresses a critical challenge in the IoT domain. Industrial manufacturers lack centralised monitoring of equipment health, leading to unplanned downtime. To respond to this challenge, the project team has set a clear business goal: Build an interoperable smart-home hub that allows seamless automation across device brands.
+
+The primary target users for this system are homeowners, city planners and field technicians. The solution is designed to streamline their workflows and deliver measurable value within 9 months of development.
+
+2. Agile Framework
+
+The project follows the Scrum framework, which organises work into fixed-length iterations known as sprints. Each sprint lasts 2 weeks, giving the team a steady cadence for planning, development, review, and retrospective activities.
+
+Scrum roles have been clearly defined. A Product Owner is responsible for maintaining and prioritising the product backlog in collaboration with stakeholders. A Scrum Master facilitates ceremonies, removes impediments, and coaches the team on Agile practices. The Development Team of 8 members is cross-functional, comprising front-end and back-end developers, QA engineers, and — where needed — DevOps specialists.
+
+The incremental delivery approach ensures that a potentially shippable product increment is available at the end of every sprint. This allows stakeholders to provide feedback early and often, reducing the cost of late-stage requirement changes.
+
+3. Product Backlog & User Stories
+
+The product backlog contains 22 user stories that have been identified, estimated, and prioritised during initial backlog grooming sessions. Story-point estimates follow the Fibonacci-like scale (1, 2, 3, 5, 8, 13) and reflect the relative complexity, effort, and uncertainty of each item. The average story-point value across the backlog is approximately 6.0.
+
+  - As a admin, I want to manage OTA update rollout schedules so that firmware deployments are controlled and safe. [5 story points]
+  - As a manager, I want to export device data to BI tools so that advanced analytics are performed externally. [8 story points]
+  - As a manager, I want to set energy-saving automation rules so that operational costs are reduced automatically. [3 story points]
+  - As a manager, I want to set up geofencing rules so that asset movement outside allowed zones triggers alerts. [5 story points]
+  - As a technician, I want to update device firmware remotely so that field visits for routine updates are eliminated. [2 story points]
+  - As a technician, I want to calibrate sensors remotely so that measurement accuracy is maintained without site visits. [8 story points]
+  - As a technician, I want to view real-time sensor readings so that I can assess equipment status from anywhere. [3 story points]
+  - As a admin, I want to integrate with ERP systems so that operational and business data are synchronised. [8 story points]
+  - As a technician, I want to receive alert notifications for anomalies so that I can respond to issues before they escalate. [13 story points]
+  - As a technician, I want to pair replacement sensors so that faulty components are swapped without downtime. [13 story points]
+  - As a admin, I want to manage device grouping and tagging so that assets are organised logically. [1 story points]
+  - As a admin, I want to register and provision new devices so that onboarding hardware is streamlined. [5 story points]
+  - As a manager, I want to schedule predictive maintenance tasks so that equipment reliability improves over time. [8 story points]
+  - As a manager, I want to view environmental condition maps so that facility conditions are monitored holistically. [1 story points]
+  - As a technician, I want to receive step-by-step repair guides so that complex repairs are completed correctly. [3 story points]
+  - As a technician, I want to access historical sensor data so that trends and patterns are easy to analyse. [8 story points]
+  - As a manager, I want to configure automated shutdown procedures so that safety protocols are enforced automatically. [13 story points]
+  - As a admin, I want to define multi-tenant device access so that shared infrastructure is logically separated. [2 story points]
+  - As a manager, I want to track SLA compliance for managed devices so that service commitments are met. [1 story points]
+  - As a technician, I want to log maintenance activities so that a complete service history is available for each asset. [8 story points]
+  - As a manager, I want to view fleet-wide device health dashboards so that I have visibility across all deployed assets. [1 story points]
+  - As a admin, I want to audit device communication logs so that security incidents are traceable. [1 story points]
+
+4. Sprint Planning & Velocity
+
+The project spans 9 months and is divided into 18 sprints of 2 weeks each. Based on the team's estimated capacity and historical data from similar projects, the anticipated velocity is approximately 38.4 story points per sprint.
+
+During sprint planning, the Product Owner presents the highest-priority items from the backlog, and the Development Team selects stories whose combined estimates fit within the sprint velocity. Any incomplete stories are carried over to the next sprint after a brief retrospective discussion to identify the root cause.
+
+Sprint reviews provide stakeholders with a live demonstration of new features. Sprint retrospectives capture lessons learned and actionable improvements, fostering continuous process enhancement.
+
+5. System Architecture & Modules
+
+A microservices architecture has been selected to handle the system's scale and complexity. Individual services can be developed, tested, and deployed independently, enabling the larger team to work in parallel without merge conflicts or coupled release cycles.
+
+The following core modules have been identified:
+
+  - Microservice Orchestrator: Service mesh with load balancing and circuit breakers
+  - Real-time Data Pipeline: Event-driven ingestion using message queues
+  - ML Inference Service: Model serving with A/B testing and canary deployments
+  - Identity & Access Management: SSO, MFA, and fine-grained permission policies
+  - Workflow Engine: Configurable, state-machine-based business-process automation
+  - Audit & Compliance Logger: Immutable audit trail for regulatory compliance
+  - Data Lake Integration: ETL pipelines connecting operational and analytical stores
+  - Edge Computing Gateway: Lightweight processing at the network edge for IoT devices
+
+6. Technology Stack
+
+Frontend : React.js + TypeScript
+Backend  : Spring Boot Microservices
+Database : MongoDB + Elasticsearch
+Cloud    : Azure AKS + Functions
+
+Additional capabilities integrated into the stack include RESTful API gateway, OAuth 2.0 authentication and cloud-based CI/CD pipeline. These features elevate the technical difficulty to 'Intermediate' and are reflected in the effort estimation multiplier.
+
+7. Risk & Requirement Volatility
+
+The overall risk level for this project is assessed as 'High', and requirement volatility is rated 'High'. Stakeholder priorities are expected to shift during the course of the project, which may lead to backlog re-prioritisation and scope adjustments across sprints. 
+
+Key risks identified:
+  - Regulatory changes may necessitate significant architecture redesign.
+  - High requirement volatility from multiple stakeholder groups.
+  - Integration with legacy systems carries substantial technical debt.
+  - Data-privacy regulations may impose additional encryption and audit requirements mid-project.
+
+Mitigation strategies adopted by the team:
+  - Automate regression tests to catch breakages from dependency updates.
+  - Use contract testing for third-party API integrations.
+  - Maintain a spike backlog for research tasks to de-risk unknowns early.
+

@@ -1,0 +1,78 @@
+========================================================================
+  PROJECT REPORT — project_04588
+  Domain        : Cloud System
+  Complexity    : Low
+  Team Size     : 5    Duration : 3 months
+========================================================================
+1. Project Overview
+
+This project addresses a critical challenge in the Cloud System domain. Disaster-recovery planning for cloud-hosted applications is ad hoc, leaving businesses exposed to data loss. To respond to this challenge, the project team has set a clear business goal: Automate infrastructure provisioning with policy-driven guardrails cutting deployment time by 70%.
+
+The primary target users for this system are DevOps engineers and IT managers. The solution is designed to streamline their workflows and deliver measurable value within 3 months of development.
+
+2. Agile Framework
+
+The project follows the Scrum framework, which organises work into fixed-length iterations known as sprints. Each sprint lasts 2 weeks, giving the team a steady cadence for planning, development, review, and retrospective activities.
+
+Scrum roles have been clearly defined. A Product Owner is responsible for maintaining and prioritising the product backlog in collaboration with stakeholders. A Scrum Master facilitates ceremonies, removes impediments, and coaches the team on Agile practices. The Development Team of 5 members is cross-functional, comprising front-end and back-end developers, QA engineers, and — where needed — DevOps specialists.
+
+The incremental delivery approach ensures that a potentially shippable product increment is available at the end of every sprint. This allows stakeholders to provide feedback early and often, reducing the cost of late-stage requirement changes.
+
+3. Product Backlog & User Stories
+
+The product backlog contains 13 user stories that have been identified, estimated, and prioritised during initial backlog grooming sessions. Story-point estimates follow the Fibonacci-like scale (1, 2, 3, 5, 8, 13) and reflect the relative complexity, effort, and uncertainty of each item. The average story-point value across the backlog is approximately 2.2.
+
+  - As a engineer, I want to provision virtual machines in minutes so that development environments are available on demand. [3 story points]
+  - As a engineer, I want to automate SSL certificate renewal so that services are never exposed with expired certificates. [3 story points]
+  - As a engineer, I want to use managed Kubernetes clusters so that orchestration complexity is offloaded to the provider. [1 story points]
+  - As a architect, I want to set up cross-region replication so that data availability meets disaster-recovery targets. [13 story points]
+  - As a admin, I want to tag all resources by project and owner so that cost and access governance is simplified. [5 story points]
+  - As a architect, I want to configure auto-scaling policies so that applications handle variable load efficiently. [1 story points]
+  - As a engineer, I want to view centralised application logs so that troubleshooting is faster across services. [2 story points]
+  - As a engineer, I want to monitor resource utilisation dashboards so that overprovisioned resources are identified quickly. [3 story points]
+  - As a architect, I want to set up API rate limiting so that backend services are protected from abuse. [8 story points]
+  - As a engineer, I want to create CI/CD pipelines so that code changes reach production safely and quickly. [13 story points]
+  - As a architect, I want to implement service mesh observability so that inter-service communication is fully traceable. [3 story points]
+  - As a engineer, I want to integrate monitoring with PagerDuty so that on-call engineers are alerted immediately. [2 story points]
+  - As a admin, I want to rotate access keys automatically so that credential exposure windows are shortened. [2 story points]
+
+4. Sprint Planning & Velocity
+
+The project spans 3 months and is divided into 6 sprints of 2 weeks each. Based on the team's estimated capacity and historical data from similar projects, the anticipated velocity is approximately 8.8 story points per sprint.
+
+During sprint planning, the Product Owner presents the highest-priority items from the backlog, and the Development Team selects stories whose combined estimates fit within the sprint velocity. Any incomplete stories are carried over to the next sprint after a brief retrospective discussion to identify the root cause.
+
+Sprint reviews provide stakeholders with a live demonstration of new features. Sprint retrospectives capture lessons learned and actionable improvements, fostering continuous process enhancement.
+
+5. System Architecture & Modules
+
+The architecture favours simplicity and rapid delivery. A monolithic application structure keeps the codebase manageable for a small team while still supporting the planned feature set.
+
+The following core modules have been identified:
+
+  - User Authentication: Simple email/password login with session management
+  - Dashboard: Basic summary view with key metrics
+  - CRUD Module: Standard create, read, update, delete operations for core entities
+  - Reporting: Pre-defined report templates with CSV export
+
+6. Technology Stack
+
+Frontend : Vue.js
+Backend  : Django
+Database : SQLite
+Cloud    : Render
+
+The stack is intentionally kept straightforward — no AI, ML, or real-time components are required. This positions the technical difficulty at 'Basic', keeping the cost-per-hour and effort multipliers at their baseline values.
+
+7. Risk & Requirement Volatility
+
+The overall risk level for this project is assessed as 'Low', and requirement volatility is rated 'Medium'. Stakeholder priorities are expected to shift during the course of the project, which may lead to backlog re-prioritisation and scope adjustments across sprints. 
+
+Key risks identified:
+  - Minor scope adjustments expected during later sprints.
+  - Potential minor delays if key team members take planned leave.
+
+Mitigation strategies adopted by the team:
+  - Establish a formal change-request process to manage scope creep.
+  - Implement feature flags to isolate risky changes behind toggles.
+

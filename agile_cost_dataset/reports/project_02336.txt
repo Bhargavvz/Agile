@@ -1,0 +1,89 @@
+========================================================================
+  PROJECT REPORT — project_02336
+  Domain        : SaaS
+  Complexity    : Medium
+  Team Size     : 7    Duration : 7 months
+========================================================================
+1. Project Overview
+
+This project addresses a critical challenge in the SaaS domain. Customer onboarding workflows are manual and inconsistent, delaying time-to-value for new accounts. To respond to this challenge, the project team has set a clear business goal: Provide real-time application-health monitoring with predictive alerting for SaaS operators.
+
+The primary target users for this system are customer success managers and end users. The solution is designed to streamline their workflows and deliver measurable value within 7 months of development.
+
+2. Agile Framework
+
+The project follows the Scrum framework, which organises work into fixed-length iterations known as sprints. Each sprint lasts 2 weeks, giving the team a steady cadence for planning, development, review, and retrospective activities.
+
+Scrum roles have been clearly defined. A Product Owner is responsible for maintaining and prioritising the product backlog in collaboration with stakeholders. A Scrum Master facilitates ceremonies, removes impediments, and coaches the team on Agile practices. The Development Team of 7 members is cross-functional, comprising front-end and back-end developers, QA engineers, and — where needed — DevOps specialists.
+
+The incremental delivery approach ensures that a potentially shippable product increment is available at the end of every sprint. This allows stakeholders to provide feedback early and often, reducing the cost of late-stage requirement changes.
+
+3. Product Backlog & User Stories
+
+The product backlog contains 19 user stories that have been identified, estimated, and prioritised during initial backlog grooming sessions. Story-point estimates follow the Fibonacci-like scale (1, 2, 3, 5, 8, 13) and reflect the relative complexity, effort, and uncertainty of each item. The average story-point value across the backlog is approximately 5.4.
+
+  - As a user, I want to share a view-only link externally so that stakeholders can review without an account. [5 story points]
+  - As a user, I want to customise my dashboard layout so that I see the metrics most relevant to my role. [5 story points]
+  - As a admin, I want to automate invoice generation so that billing is accurate and timely. [13 story points]
+  - As a user, I want to sign up and start a free trial so that I can evaluate the product risk-free. [3 story points]
+  - As a admin, I want to set up multi-region data residency so that data sovereignty requirements are met. [3 story points]
+  - As a user, I want to collaborate with team members in real time so that we work together without version conflicts. [3 story points]
+  - As a admin, I want to offer a white-label option so that partners can rebrand the product. [13 story points]
+  - As a admin, I want to generate SLA compliance reports so that clients can verify service guarantees. [3 story points]
+  - As a admin, I want to monitor error rates per tenant so that issues are isolated and resolved quickly. [13 story points]
+  - As a admin, I want to manage role-based permissions so that data access follows the principle of least privilege. [2 story points]
+  - As a user, I want to receive in-app notifications so that I stay up to date without checking email. [5 story points]
+  - As a user, I want to set up automated workflows so that repetitive manual tasks are eliminated. [13 story points]
+  - As a user, I want to bookmark frequently used resources so that I access key items with one click. [5 story points]
+  - As a user, I want to search across all projects so that I can find information quickly. [1 story points]
+  - As a admin, I want to manage API rate limits per tenant so that fair usage is enforced across clients. [1 story points]
+  - As a admin, I want to configure webhook integrations so that external systems react to platform events. [5 story points]
+  - As a user, I want to view version history of documents so that I can revert changes when needed. [5 story points]
+  - As a user, I want to create and share templates so that common tasks are standardised across the team. [1 story points]
+  - As a admin, I want to deploy feature flags for gradual rollout so that new features are launched safely. [1 story points]
+
+4. Sprint Planning & Velocity
+
+The project spans 7 months and is divided into 14 sprints of 2 weeks each. Based on the team's estimated capacity and historical data from similar projects, the anticipated velocity is approximately 30.2 story points per sprint.
+
+During sprint planning, the Product Owner presents the highest-priority items from the backlog, and the Development Team selects stories whose combined estimates fit within the sprint velocity. Any incomplete stories are carried over to the next sprint after a brief retrospective discussion to identify the root cause.
+
+Sprint reviews provide stakeholders with a live demonstration of new features. Sprint retrospectives capture lessons learned and actionable improvements, fostering continuous process enhancement.
+
+5. System Architecture & Modules
+
+A modular architecture separates concerns across well-defined service boundaries. This balances development velocity with the flexibility needed to accommodate growing feature requirements as the product matures.
+
+The following core modules have been identified:
+
+  - User & Role Management: Role-based access control with multi-tenancy support
+  - API Gateway: Centralised routing, rate limiting, and request validation
+  - Notification Service: Email, SMS, and in-app notification delivery engine
+  - Analytics Engine: Aggregated dashboards with drill-down and date-range filtering
+  - Payment Integration: Secure payment processing via third-party gateway
+  - Search Module: Full-text search with filters and pagination
+
+6. Technology Stack
+
+Frontend : Angular
+Backend  : ASP.NET Core
+Database : PostgreSQL
+Cloud    : AWS EC2 + S3
+
+Additional capabilities integrated into the stack include RESTful API gateway, OAuth 2.0 authentication and cloud-based CI/CD pipeline. These features elevate the technical difficulty to 'Intermediate' and are reflected in the effort estimation multiplier.
+
+7. Risk & Requirement Volatility
+
+The overall risk level for this project is assessed as 'Medium', and requirement volatility is rated 'Medium'. Stakeholder priorities are expected to shift during the course of the project, which may lead to backlog re-prioritisation and scope adjustments across sprints. 
+
+Key risks identified:
+  - Third-party API changes could require interface rework.
+  - Stakeholder requirement revisions expected after UAT phase.
+  - Team may face learning-curve delays with new framework adoption.
+
+Mitigation strategies adopted by the team:
+  - Conduct bi-weekly stakeholder review sessions to catch requirement drift.
+  - Automate regression tests to catch breakages from dependency updates.
+  - Establish a formal change-request process to manage scope creep.
+  - Schedule knowledge-transfer sessions to reduce bus-factor risk.
+

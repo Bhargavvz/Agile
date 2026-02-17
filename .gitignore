@@ -1,0 +1,37 @@
+# ──────────────── Python ────────────────
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.egg-info/
+dist/
+build/
+.eggs/
+
+# ──────────────── Virtual Env ───────────
+venv/
+.venv/
+env/
+
+# ──────────────── IDE ───────────────────
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# ──────────────── OS ────────────────────
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ──────────────── Training Outputs ──────
+# Model checkpoints are tracked via Git LFS
+# (see .gitattributes)
+results/
+*.log
+
+# ──────────────── Dataset ───────────────
+# Reports are generated; uncomment below to
+# exclude them from git if desired:
+# agile_cost_dataset/reports/

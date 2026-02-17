@@ -1,0 +1,91 @@
+========================================================================
+  PROJECT REPORT — project_07920
+  Domain        : Cloud System
+  Complexity    : High
+  Team Size     : 9    Duration : 8 months
+========================================================================
+1. Project Overview
+
+This project addresses a critical challenge in the Cloud System domain. Manual cloud provisioning processes are slow and error-prone, delaying development team productivity. To respond to this challenge, the project team has set a clear business goal: Implement a unified multi-cloud management console that consolidates cost and usage visibility.
+
+The primary target users for this system are cloud architects, security auditors and IT managers. The solution is designed to streamline their workflows and deliver measurable value within 8 months of development.
+
+2. Agile Framework
+
+The project follows the Scrum framework, which organises work into fixed-length iterations known as sprints. Each sprint lasts 2 weeks, giving the team a steady cadence for planning, development, review, and retrospective activities.
+
+Scrum roles have been clearly defined. A Product Owner is responsible for maintaining and prioritising the product backlog in collaboration with stakeholders. A Scrum Master facilitates ceremonies, removes impediments, and coaches the team on Agile practices. The Development Team of 9 members is cross-functional, comprising front-end and back-end developers, QA engineers, and — where needed — DevOps specialists.
+
+The incremental delivery approach ensures that a potentially shippable product increment is available at the end of every sprint. This allows stakeholders to provide feedback early and often, reducing the cost of late-stage requirement changes.
+
+3. Product Backlog & User Stories
+
+The product backlog contains 20 user stories that have been identified, estimated, and prioritised during initial backlog grooming sessions. Story-point estimates follow the Fibonacci-like scale (1, 2, 3, 5, 8, 13) and reflect the relative complexity, effort, and uncertainty of each item. The average story-point value across the backlog is approximately 5.2.
+
+  - As a admin, I want to manage cost budgets and alerts so that cloud spending stays within approved limits. [8 story points]
+  - As a engineer, I want to view centralised application logs so that troubleshooting is faster across services. [1 story points]
+  - As a architect, I want to set up cross-region replication so that data availability meets disaster-recovery targets. [5 story points]
+  - As a architect, I want to plan capacity for seasonal traffic spikes so that customer experience is consistent year-round. [5 story points]
+  - As a admin, I want to tag all resources by project and owner so that cost and access governance is simplified. [8 story points]
+  - As a engineer, I want to integrate monitoring with PagerDuty so that on-call engineers are alerted immediately. [2 story points]
+  - As a admin, I want to generate monthly cost-allocation reports so that departments are charged accurately. [5 story points]
+  - As a admin, I want to restrict public bucket access so that data leakage risk is eliminated. [13 story points]
+  - As a engineer, I want to test disaster-recovery failover procedures so that recovery-time objectives are validated. [5 story points]
+  - As a engineer, I want to perform blue-green deployments so that releases are zero-downtime. [8 story points]
+  - As a architect, I want to evaluate spot-instance strategies so that compute costs are reduced for fault-tolerant workloads. [13 story points]
+  - As a architect, I want to implement service mesh observability so that inter-service communication is fully traceable. [2 story points]
+  - As a engineer, I want to provision virtual machines in minutes so that development environments are available on demand. [5 story points]
+  - As a architect, I want to optimise CDN caching rules so that content delivery latency is minimised globally. [5 story points]
+  - As a engineer, I want to create CI/CD pipelines so that code changes reach production safely and quickly. [13 story points]
+  - As a admin, I want to configure data encryption at rest and in transit so that sensitive data is protected end-to-end. [2 story points]
+  - As a engineer, I want to use managed Kubernetes clusters so that orchestration complexity is offloaded to the provider. [1 story points]
+  - As a engineer, I want to set up database backups on schedule so that data loss risk is minimised. [13 story points]
+  - As a architect, I want to design multi-AZ deployments so that applications survive availability-zone failures. [3 story points]
+  - As a engineer, I want to automate SSL certificate renewal so that services are never exposed with expired certificates. [3 story points]
+
+4. Sprint Planning & Velocity
+
+The project spans 8 months and is divided into 16 sprints of 2 weeks each. Based on the team's estimated capacity and historical data from similar projects, the anticipated velocity is approximately 37.4 story points per sprint.
+
+During sprint planning, the Product Owner presents the highest-priority items from the backlog, and the Development Team selects stories whose combined estimates fit within the sprint velocity. Any incomplete stories are carried over to the next sprint after a brief retrospective discussion to identify the root cause.
+
+Sprint reviews provide stakeholders with a live demonstration of new features. Sprint retrospectives capture lessons learned and actionable improvements, fostering continuous process enhancement.
+
+5. System Architecture & Modules
+
+A microservices architecture has been selected to handle the system's scale and complexity. Individual services can be developed, tested, and deployed independently, enabling the larger team to work in parallel without merge conflicts or coupled release cycles.
+
+The following core modules have been identified:
+
+  - Microservice Orchestrator: Service mesh with load balancing and circuit breakers
+  - Real-time Data Pipeline: Event-driven ingestion using message queues
+  - ML Inference Service: Model serving with A/B testing and canary deployments
+  - Identity & Access Management: SSO, MFA, and fine-grained permission policies
+  - Workflow Engine: Configurable, state-machine-based business-process automation
+  - Audit & Compliance Logger: Immutable audit trail for regulatory compliance
+  - Data Lake Integration: ETL pipelines connecting operational and analytical stores
+  - Edge Computing Gateway: Lightweight processing at the network edge for IoT devices
+
+6. Technology Stack
+
+Frontend : React.js + TypeScript
+Backend  : FastAPI + Celery
+Database : CockroachDB
+Cloud    : AWS EKS + Lambda
+
+Additional capabilities integrated into the stack include RESTful API gateway, OAuth 2.0 authentication and cloud-based CI/CD pipeline. These features elevate the technical difficulty to 'Intermediate' and are reflected in the effort estimation multiplier.
+
+7. Risk & Requirement Volatility
+
+The overall risk level for this project is assessed as 'High', and requirement volatility is rated 'High'. Stakeholder priorities are expected to shift during the course of the project, which may lead to backlog re-prioritisation and scope adjustments across sprints. 
+
+Key risks identified:
+  - Regulatory changes may necessitate significant architecture redesign.
+  - High requirement volatility from multiple stakeholder groups.
+  - Integration with legacy systems carries substantial technical debt.
+  - Data-privacy regulations may impose additional encryption and audit requirements mid-project.
+
+Mitigation strategies adopted by the team:
+  - Maintain a spike backlog for research tasks to de-risk unknowns early.
+  - Establish a formal change-request process to manage scope creep.
+

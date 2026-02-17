@@ -1,0 +1,23 @@
+{
+  "dataset_name": "Agile Software Cost Estimation Dataset",
+  "description": "A synthetic dataset of 10,000 Agile Scrum project reports with deterministically-computed effort and cost labels. Designed for training NLP + regression deep-learning models for software cost estimation.",
+  "generation_logic": "Each project's cost is derived from: final_effort = (base_effort + story_effort) \u00d7 complexity_multiplier \u00d7 tech_multiplier \u00d7 volatility_multiplier. final_cost = final_effort \u00d7 cost_per_hour (with \u00b15% noise). base_effort = team_size \u00d7 duration_months \u00d7 160. story_effort = total_user_stories \u00d7 avg_story_points \u00d7 4.",
+  "total_samples": 10000,
+  "domains": [
+    "E-commerce",
+    "Healthcare",
+    "FinTech",
+    "EdTech",
+    "SaaS",
+    "AI Platform",
+    "IoT",
+    "Cloud System"
+  ],
+  "complexity_levels": [
+    "Low",
+    "Medium",
+    "High"
+  ],
+  "seed": 42,
+  "created_at": "2026-02-17T13:13:46.784988Z"
+}

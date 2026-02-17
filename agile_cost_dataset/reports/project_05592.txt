@@ -1,0 +1,98 @@
+========================================================================
+  PROJECT REPORT — project_05592
+  Domain        : FinTech
+  Complexity    : High
+  Team Size     : 9    Duration : 7 months
+========================================================================
+1. Project Overview
+
+This project addresses a critical challenge in the FinTech domain. Consumers in under-banked regions have limited access to affordable credit and digital payment infrastructure. To respond to this challenge, the project team has set a clear business goal: Offer a unified personal-finance dashboard aggregating data from multiple banking institutions.
+
+The primary target users for this system are banking customers and loan officers. The solution is designed to streamline their workflows and deliver measurable value within 7 months of development.
+
+2. Agile Framework
+
+The project follows the Scrum framework, which organises work into fixed-length iterations known as sprints. Each sprint lasts 2 weeks, giving the team a steady cadence for planning, development, review, and retrospective activities.
+
+Scrum roles have been clearly defined. A Product Owner is responsible for maintaining and prioritising the product backlog in collaboration with stakeholders. A Scrum Master facilitates ceremonies, removes impediments, and coaches the team on Agile practices. The Development Team of 9 members is cross-functional, comprising front-end and back-end developers, QA engineers, and — where needed — DevOps specialists.
+
+The incremental delivery approach ensures that a potentially shippable product increment is available at the end of every sprint. This allows stakeholders to provide feedback early and often, reducing the cost of late-stage requirement changes.
+
+3. Product Backlog & User Stories
+
+The product backlog contains 25 user stories that have been identified, estimated, and prioritised during initial backlog grooming sessions. Story-point estimates follow the Fibonacci-like scale (1, 2, 3, 5, 8, 13) and reflect the relative complexity, effort, and uncertainty of each item. The average story-point value across the backlog is approximately 5.2.
+
+  - As a customer, I want to share spending summaries with my advisor so that I receive better financial guidance. [1 story points]
+  - As a customer, I want to view my credit score so that I understand my borrowing eligibility. [8 story points]
+  - As a customer, I want to freeze and unfreeze my card so that I can respond quickly if my card is lost. [8 story points]
+  - As a admin, I want to configure fee structures so that revenue models are flexible and transparent. [8 story points]
+  - As a customer, I want to open a digital savings account so that I can start saving without visiting a branch. [1 story points]
+  - As a analyst, I want to run anti-money-laundering checks so that the platform complies with financial regulations. [13 story points]
+  - As a admin, I want to set compliance alert thresholds so that regulatory breaches are flagged automatically. [8 story points]
+  - As a customer, I want to apply for a personal loan so that I can access credit quickly when needed. [13 story points]
+  - As a customer, I want to categorise my spending automatically so that I can track my financial habits. [3 story points]
+  - As a customer, I want to initiate a chargeback request so that disputed transactions are resolved fairly. [3 story points]
+  - As a customer, I want to request a virtual debit card so that I can shop online securely. [8 story points]
+  - As a admin, I want to manage interest rate configurations so that product profitability is maintained. [8 story points]
+  - As a admin, I want to configure multi-currency support so that international users can transact seamlessly. [1 story points]
+  - As a analyst, I want to generate suspicious-activity reports so that regulators are kept informed as required. [13 story points]
+  - As a customer, I want to enable biometric login so that my account access is both fast and secure. [2 story points]
+  - As a admin, I want to define tiered KYC verification levels so that onboarding is proportional to account risk. [5 story points]
+  - As a admin, I want to monitor API uptime for partner integrations so that service-level agreements are met. [1 story points]
+  - As a customer, I want to export tax-ready financial statements so that I can file taxes without manual calculation. [5 story points]
+  - As a customer, I want to receive low-balance alerts so that I can avoid overdraft fees. [3 story points]
+  - As a analyst, I want to track customer churn signals so that retention campaigns are targeted accurately. [2 story points]
+  - As a admin, I want to manage regulatory reports so that filings are submitted accurately and on time. [3 story points]
+  - As a customer, I want to set up recurring bill payments so that my bills are paid automatically. [1 story points]
+  - As a analyst, I want to backtest fraud-detection models so that rule effectiveness is validated before deployment. [1 story points]
+  - As a customer, I want to send money instantly to another user so that I can settle payments in real time. [2 story points]
+  - As a analyst, I want to view transaction risk scores so that I can investigate suspicious activity efficiently. [5 story points]
+
+4. Sprint Planning & Velocity
+
+The project spans 7 months and is divided into 14 sprints of 2 weeks each. Based on the team's estimated capacity and historical data from similar projects, the anticipated velocity is approximately 37.4 story points per sprint.
+
+During sprint planning, the Product Owner presents the highest-priority items from the backlog, and the Development Team selects stories whose combined estimates fit within the sprint velocity. Any incomplete stories are carried over to the next sprint after a brief retrospective discussion to identify the root cause.
+
+Sprint reviews provide stakeholders with a live demonstration of new features. Sprint retrospectives capture lessons learned and actionable improvements, fostering continuous process enhancement.
+
+5. System Architecture & Modules
+
+A microservices architecture has been selected to handle the system's scale and complexity. Individual services can be developed, tested, and deployed independently, enabling the larger team to work in parallel without merge conflicts or coupled release cycles.
+
+The following core modules have been identified:
+
+  - Microservice Orchestrator: Service mesh with load balancing and circuit breakers
+  - Real-time Data Pipeline: Event-driven ingestion using message queues
+  - ML Inference Service: Model serving with A/B testing and canary deployments
+  - Identity & Access Management: SSO, MFA, and fine-grained permission policies
+  - Workflow Engine: Configurable, state-machine-based business-process automation
+  - Audit & Compliance Logger: Immutable audit trail for regulatory compliance
+  - Data Lake Integration: ETL pipelines connecting operational and analytical stores
+  - Edge Computing Gateway: Lightweight processing at the network edge for IoT devices
+
+6. Technology Stack
+
+Frontend : React.js + TypeScript
+Backend  : Go + gRPC
+Database : MongoDB + Elasticsearch
+Cloud    : Azure AKS + Functions
+
+Additional capabilities integrated into the stack include real-time WebSocket streaming, ML-powered recommendation engine, end-to-end encryption and AI-based anomaly detection. These features elevate the technical difficulty to 'Advanced' and are reflected in the effort estimation multiplier.
+
+7. Risk & Requirement Volatility
+
+The overall risk level for this project is assessed as 'High', and requirement volatility is rated 'High'. Stakeholder priorities are expected to shift during the course of the project, which may lead to backlog re-prioritisation and scope adjustments across sprints. 
+
+Key risks identified:
+  - Regulatory changes may necessitate significant architecture redesign.
+  - High requirement volatility from multiple stakeholder groups.
+  - Integration with legacy systems carries substantial technical debt.
+  - Data-privacy regulations may impose additional encryption and audit requirements mid-project.
+
+Mitigation strategies adopted by the team:
+  - Maintain a spike backlog for research tasks to de-risk unknowns early.
+  - Establish a formal change-request process to manage scope creep.
+  - Use contract testing for third-party API integrations.
+  - Schedule knowledge-transfer sessions to reduce bus-factor risk.
+

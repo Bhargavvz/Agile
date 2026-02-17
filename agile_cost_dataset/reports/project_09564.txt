@@ -1,0 +1,96 @@
+========================================================================
+  PROJECT REPORT — project_09564
+  Domain        : E-commerce
+  Complexity    : High
+  Team Size     : 9    Duration : 11 months
+========================================================================
+1. Project Overview
+
+This project addresses a critical challenge in the E-commerce domain. Traditional brick-and-mortar retailers are losing market share to online competitors due to lack of digital presence. To respond to this challenge, the project team has set a clear business goal: Launch a feature-rich online marketplace that drives a 40% increase in customer reach within 12 months.
+
+The primary target users for this system are warehouse managers and retail merchants. The solution is designed to streamline their workflows and deliver measurable value within 11 months of development.
+
+2. Agile Framework
+
+The project follows the Scrum framework, which organises work into fixed-length iterations known as sprints. Each sprint lasts 2 weeks, giving the team a steady cadence for planning, development, review, and retrospective activities.
+
+Scrum roles have been clearly defined. A Product Owner is responsible for maintaining and prioritising the product backlog in collaboration with stakeholders. A Scrum Master facilitates ceremonies, removes impediments, and coaches the team on Agile practices. The Development Team of 9 members is cross-functional, comprising front-end and back-end developers, QA engineers, and — where needed — DevOps specialists.
+
+The incremental delivery approach ensures that a potentially shippable product increment is available at the end of every sprint. This allows stakeholders to provide feedback early and often, reducing the cost of late-stage requirement changes.
+
+3. Product Backlog & User Stories
+
+The product backlog contains 23 user stories that have been identified, estimated, and prioritised during initial backlog grooming sessions. Story-point estimates follow the Fibonacci-like scale (1, 2, 3, 5, 8, 13) and reflect the relative complexity, effort, and uncertainty of each item. The average story-point value across the backlog is approximately 5.1.
+
+  - As a merchant, I want to manage return and refund requests so that customer issues are resolved promptly. [8 story points]
+  - As a merchant, I want to export product data to CSV so that I can use the data in external tools. [13 story points]
+  - As a admin, I want to audit user activity logs so that I can detect and prevent fraudulent behaviour. [1 story points]
+  - As a shopper, I want to browse products by category so that I can quickly find what I need. [2 story points]
+  - As a admin, I want to send platform-wide announcements so that all users are informed of important updates. [5 story points]
+  - As a shopper, I want to save my shipping address so that future checkouts are faster. [5 story points]
+  - As a shopper, I want to chat with customer support so that I can get help without leaving the site. [3 story points]
+  - As a merchant, I want to view sales analytics dashboard so that I can make data-driven inventory decisions. [2 story points]
+  - As a merchant, I want to set up automated promotional campaigns so that I can boost sales without manual effort. [5 story points]
+  - As a merchant, I want to offer flash sales with countdown timers so that I can create urgency and boost conversions. [3 story points]
+  - As a shopper, I want to subscribe to a product category newsletter so that I stay informed about new arrivals. [3 story points]
+  - As a shopper, I want to apply discount coupons at checkout so that I can take advantage of promotions. [3 story points]
+  - As a shopper, I want to use multiple payment methods so that I have flexibility at checkout. [1 story points]
+  - As a admin, I want to manage user accounts so that I can ensure platform security and compliance. [8 story points]
+  - As a admin, I want to monitor platform uptime metrics so that I can ensure high availability for all users. [8 story points]
+  - As a merchant, I want to manage my product catalogue so that I can add, update, or remove listings efficiently. [3 story points]
+  - As a admin, I want to configure tax and compliance rules so that the platform meets regional regulations. [3 story points]
+  - As a shopper, I want to filter search results by price range so that I find products within my budget quickly. [1 story points]
+  - As a shopper, I want to add items to a wish list so that I can save products for later purchase. [13 story points]
+  - As a shopper, I want to receive personalised product recommendations so that I discover items I am likely to buy. [13 story points]
+  - As a shopper, I want to compare products side by side so that I can choose the best option for my budget. [3 story points]
+  - As a shopper, I want to receive restock notifications so that I can purchase out-of-stock favourites when available. [8 story points]
+  - As a shopper, I want to track my order in real time so that I know exactly when my delivery will arrive. [13 story points]
+
+4. Sprint Planning & Velocity
+
+The project spans 11 months and is divided into 22 sprints of 2 weeks each. Based on the team's estimated capacity and historical data from similar projects, the anticipated velocity is approximately 36.7 story points per sprint.
+
+During sprint planning, the Product Owner presents the highest-priority items from the backlog, and the Development Team selects stories whose combined estimates fit within the sprint velocity. Any incomplete stories are carried over to the next sprint after a brief retrospective discussion to identify the root cause.
+
+Sprint reviews provide stakeholders with a live demonstration of new features. Sprint retrospectives capture lessons learned and actionable improvements, fostering continuous process enhancement.
+
+5. System Architecture & Modules
+
+A microservices architecture has been selected to handle the system's scale and complexity. Individual services can be developed, tested, and deployed independently, enabling the larger team to work in parallel without merge conflicts or coupled release cycles.
+
+The following core modules have been identified:
+
+  - Microservice Orchestrator: Service mesh with load balancing and circuit breakers
+  - Real-time Data Pipeline: Event-driven ingestion using message queues
+  - ML Inference Service: Model serving with A/B testing and canary deployments
+  - Identity & Access Management: SSO, MFA, and fine-grained permission policies
+  - Workflow Engine: Configurable, state-machine-based business-process automation
+  - Audit & Compliance Logger: Immutable audit trail for regulatory compliance
+  - Data Lake Integration: ETL pipelines connecting operational and analytical stores
+  - Edge Computing Gateway: Lightweight processing at the network edge for IoT devices
+
+6. Technology Stack
+
+Frontend : Next.js + GraphQL
+Backend  : Go + gRPC
+Database : MongoDB + Elasticsearch
+Cloud    : GCP GKE + Pub/Sub
+
+Additional capabilities integrated into the stack include real-time WebSocket streaming, ML-powered recommendation engine, end-to-end encryption and AI-based anomaly detection. These features elevate the technical difficulty to 'Advanced' and are reflected in the effort estimation multiplier.
+
+7. Risk & Requirement Volatility
+
+The overall risk level for this project is assessed as 'High', and requirement volatility is rated 'Medium'. Stakeholder priorities are expected to shift during the course of the project, which may lead to backlog re-prioritisation and scope adjustments across sprints. 
+
+Key risks identified:
+  - Regulatory changes may necessitate significant architecture redesign.
+  - High requirement volatility from multiple stakeholder groups.
+  - Integration with legacy systems carries substantial technical debt.
+  - Data-privacy regulations may impose additional encryption and audit requirements mid-project.
+
+Mitigation strategies adopted by the team:
+  - Use contract testing for third-party API integrations.
+  - Establish a formal change-request process to manage scope creep.
+  - Automate regression tests to catch breakages from dependency updates.
+  - Conduct bi-weekly stakeholder review sessions to catch requirement drift.
+

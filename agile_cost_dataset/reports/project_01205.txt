@@ -1,0 +1,92 @@
+========================================================================
+  PROJECT REPORT — project_01205
+  Domain        : Healthcare
+  Complexity    : Medium
+  Team Size     : 7    Duration : 7 months
+========================================================================
+1. Project Overview
+
+This project addresses a critical challenge in the Healthcare domain. Patient medical records are fragmented across facilities, making continuity of care extremely challenging for practitioners. To respond to this challenge, the project team has set a clear business goal: Provide telemedicine capabilities so patients in underserved regions can consult specialists remotely.
+
+The primary target users for this system are insurance coordinators and patients. The solution is designed to streamline their workflows and deliver measurable value within 7 months of development.
+
+2. Agile Framework
+
+The project follows the Scrum framework, which organises work into fixed-length iterations known as sprints. Each sprint lasts 2 weeks, giving the team a steady cadence for planning, development, review, and retrospective activities.
+
+Scrum roles have been clearly defined. A Product Owner is responsible for maintaining and prioritising the product backlog in collaboration with stakeholders. A Scrum Master facilitates ceremonies, removes impediments, and coaches the team on Agile practices. The Development Team of 7 members is cross-functional, comprising front-end and back-end developers, QA engineers, and — where needed — DevOps specialists.
+
+The incremental delivery approach ensures that a potentially shippable product increment is available at the end of every sprint. This allows stakeholders to provide feedback early and often, reducing the cost of late-stage requirement changes.
+
+3. Product Backlog & User Stories
+
+The product backlog contains 22 user stories that have been identified, estimated, and prioritised during initial backlog grooming sessions. Story-point estimates follow the Fibonacci-like scale (1, 2, 3, 5, 8, 13) and reflect the relative complexity, effort, and uncertainty of each item. The average story-point value across the backlog is approximately 5.6.
+
+  - As a admin, I want to manage multi-facility resource sharing so that specialist services are available across locations. [8 story points]
+  - As a patient, I want to access vaccination records so that I can share proof of immunisation when required. [5 story points]
+  - As a patient, I want to view wait time estimates so that I can plan my visit accordingly. [2 story points]
+  - As a admin, I want to schedule preventive-care outreach campaigns so that at-risk populations are proactively contacted. [2 story points]
+  - As a physician, I want to access drug interaction warnings so that I prescribe medications safely. [1 story points]
+  - As a physician, I want to write and share e-prescriptions so that pharmacies can dispense medications promptly. [5 story points]
+  - As a admin, I want to configure automatic appointment reminders so that no-show rates are reduced. [1 story points]
+  - As a patient, I want to view my lab test results so that I stay informed about my health status. [8 story points]
+  - As a admin, I want to enforce data-access audit trails so that compliance with HIPAA regulations is ensured. [1 story points]
+  - As a admin, I want to manage doctor schedules so that appointment slots are allocated efficiently. [1 story points]
+  - As a patient, I want to consult a specialist via video call so that I get expert advice without travelling. [5 story points]
+  - As a patient, I want to request a prescription refill so that I can continue treatment without an extra visit. [8 story points]
+  - As a admin, I want to track medical equipment inventory so that supplies are restocked before they run out. [3 story points]
+  - As a physician, I want to document clinical notes with voice input so that charting time is reduced significantly. [3 story points]
+  - As a patient, I want to rate and review healthcare providers so that other patients can make informed choices. [1 story points]
+  - As a patient, I want to set health goals and track progress so that I am more engaged in my wellness journey. [13 story points]
+  - As a physician, I want to order lab tests electronically so that results are linked to the patient's record automatically. [8 story points]
+  - As a physician, I want to access a patient's full medical history so that I can make informed clinical decisions. [2 story points]
+  - As a physician, I want to collaborate with another physician on a case so that complex cases get multi-specialist input. [5 story points]
+  - As a physician, I want to set up clinical alerts for critical values so that I am notified immediately of emergencies. [8 story points]
+  - As a admin, I want to generate insurance claim reports so that billing processes are completed on time. [5 story points]
+  - As a physician, I want to view diagnostic imaging inline so that I can discuss findings with patients in real time. [13 story points]
+
+4. Sprint Planning & Velocity
+
+The project spans 7 months and is divided into 14 sprints of 2 weeks each. Based on the team's estimated capacity and historical data from similar projects, the anticipated velocity is approximately 31.4 story points per sprint.
+
+During sprint planning, the Product Owner presents the highest-priority items from the backlog, and the Development Team selects stories whose combined estimates fit within the sprint velocity. Any incomplete stories are carried over to the next sprint after a brief retrospective discussion to identify the root cause.
+
+Sprint reviews provide stakeholders with a live demonstration of new features. Sprint retrospectives capture lessons learned and actionable improvements, fostering continuous process enhancement.
+
+5. System Architecture & Modules
+
+A modular architecture separates concerns across well-defined service boundaries. This balances development velocity with the flexibility needed to accommodate growing feature requirements as the product matures.
+
+The following core modules have been identified:
+
+  - User & Role Management: Role-based access control with multi-tenancy support
+  - API Gateway: Centralised routing, rate limiting, and request validation
+  - Notification Service: Email, SMS, and in-app notification delivery engine
+  - Analytics Engine: Aggregated dashboards with drill-down and date-range filtering
+  - Payment Integration: Secure payment processing via third-party gateway
+  - Search Module: Full-text search with filters and pagination
+
+6. Technology Stack
+
+Frontend : React.js
+Backend  : FastAPI
+Database : Firebase
+Cloud    : Azure App Service
+
+Additional capabilities integrated into the stack include RESTful API gateway, OAuth 2.0 authentication and cloud-based CI/CD pipeline. These features elevate the technical difficulty to 'Intermediate' and are reflected in the effort estimation multiplier.
+
+7. Risk & Requirement Volatility
+
+The overall risk level for this project is assessed as 'Medium', and requirement volatility is rated 'Medium'. Stakeholder priorities are expected to shift during the course of the project, which may lead to backlog re-prioritisation and scope adjustments across sprints. 
+
+Key risks identified:
+  - Third-party API changes could require interface rework.
+  - Stakeholder requirement revisions expected after UAT phase.
+  - Team may face learning-curve delays with new framework adoption.
+
+Mitigation strategies adopted by the team:
+  - Maintain a spike backlog for research tasks to de-risk unknowns early.
+  - Automate regression tests to catch breakages from dependency updates.
+  - Establish a formal change-request process to manage scope creep.
+  - Implement feature flags to isolate risky changes behind toggles.
+

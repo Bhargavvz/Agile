@@ -1,0 +1,94 @@
+========================================================================
+  PROJECT REPORT — project_09765
+  Domain        : Healthcare
+  Complexity    : High
+  Team Size     : 12    Duration : 12 months
+========================================================================
+1. Project Overview
+
+This project addresses a critical challenge in the Healthcare domain. Manual appointment scheduling in clinics leads to long wait times and administrative overhead for both staff and patients. To respond to this challenge, the project team has set a clear business goal: Automate appointment scheduling and follow-up reminders to reduce no-show rates by 30%.
+
+The primary target users for this system are patients, physicians and insurance coordinators. The solution is designed to streamline their workflows and deliver measurable value within 12 months of development.
+
+2. Agile Framework
+
+The project follows the Scrum framework, which organises work into fixed-length iterations known as sprints. Each sprint lasts 2 weeks, giving the team a steady cadence for planning, development, review, and retrospective activities.
+
+Scrum roles have been clearly defined. A Product Owner is responsible for maintaining and prioritising the product backlog in collaboration with stakeholders. A Scrum Master facilitates ceremonies, removes impediments, and coaches the team on Agile practices. The Development Team of 12 members is cross-functional, comprising front-end and back-end developers, QA engineers, and — where needed — DevOps specialists.
+
+The incremental delivery approach ensures that a potentially shippable product increment is available at the end of every sprint. This allows stakeholders to provide feedback early and often, reducing the cost of late-stage requirement changes.
+
+3. Product Backlog & User Stories
+
+The product backlog contains 21 user stories that have been identified, estimated, and prioritised during initial backlog grooming sessions. Story-point estimates follow the Fibonacci-like scale (1, 2, 3, 5, 8, 13) and reflect the relative complexity, effort, and uncertainty of each item. The average story-point value across the backlog is approximately 5.4.
+
+  - As a patient, I want to receive medication reminders so that I never miss a dose. [8 story points]
+  - As a admin, I want to manage multi-facility resource sharing so that specialist services are available across locations. [5 story points]
+  - As a patient, I want to book an appointment online so that I avoid long phone queues. [8 story points]
+  - As a physician, I want to write and share e-prescriptions so that pharmacies can dispense medications promptly. [13 story points]
+  - As a patient, I want to view wait time estimates so that I can plan my visit accordingly. [1 story points]
+  - As a admin, I want to schedule preventive-care outreach campaigns so that at-risk populations are proactively contacted. [2 story points]
+  - As a physician, I want to collaborate with another physician on a case so that complex cases get multi-specialist input. [2 story points]
+  - As a physician, I want to order lab tests electronically so that results are linked to the patient's record automatically. [1 story points]
+  - As a admin, I want to configure automatic appointment reminders so that no-show rates are reduced. [3 story points]
+  - As a physician, I want to set up clinical alerts for critical values so that I am notified immediately of emergencies. [5 story points]
+  - As a admin, I want to produce department-wise performance reports so that hospital leadership can optimise operations. [2 story points]
+  - As a patient, I want to download a discharge summary so that I have my records for future reference. [5 story points]
+  - As a patient, I want to view my lab test results so that I stay informed about my health status. [13 story points]
+  - As a patient, I want to set health goals and track progress so that I am more engaged in my wellness journey. [5 story points]
+  - As a patient, I want to consult a specialist via video call so that I get expert advice without travelling. [13 story points]
+  - As a physician, I want to document clinical notes with voice input so that charting time is reduced significantly. [13 story points]
+  - As a physician, I want to view diagnostic imaging inline so that I can discuss findings with patients in real time. [8 story points]
+  - As a patient, I want to request a prescription refill so that I can continue treatment without an extra visit. [5 story points]
+  - As a patient, I want to update my insurance information so that billing is processed without delays. [5 story points]
+  - As a patient, I want to access vaccination records so that I can share proof of immunisation when required. [1 story points]
+  - As a admin, I want to monitor bed occupancy in real time so that resources are allocated where needed most. [2 story points]
+
+4. Sprint Planning & Velocity
+
+The project spans 12 months and is divided into 24 sprints of 2 weeks each. Based on the team's estimated capacity and historical data from similar projects, the anticipated velocity is approximately 51.8 story points per sprint.
+
+During sprint planning, the Product Owner presents the highest-priority items from the backlog, and the Development Team selects stories whose combined estimates fit within the sprint velocity. Any incomplete stories are carried over to the next sprint after a brief retrospective discussion to identify the root cause.
+
+Sprint reviews provide stakeholders with a live demonstration of new features. Sprint retrospectives capture lessons learned and actionable improvements, fostering continuous process enhancement.
+
+5. System Architecture & Modules
+
+A microservices architecture has been selected to handle the system's scale and complexity. Individual services can be developed, tested, and deployed independently, enabling the larger team to work in parallel without merge conflicts or coupled release cycles.
+
+The following core modules have been identified:
+
+  - Microservice Orchestrator: Service mesh with load balancing and circuit breakers
+  - Real-time Data Pipeline: Event-driven ingestion using message queues
+  - ML Inference Service: Model serving with A/B testing and canary deployments
+  - Identity & Access Management: SSO, MFA, and fine-grained permission policies
+  - Workflow Engine: Configurable, state-machine-based business-process automation
+  - Audit & Compliance Logger: Immutable audit trail for regulatory compliance
+  - Data Lake Integration: ETL pipelines connecting operational and analytical stores
+  - Edge Computing Gateway: Lightweight processing at the network edge for IoT devices
+
+6. Technology Stack
+
+Frontend : React.js + TypeScript
+Backend  : FastAPI + Celery
+Database : CockroachDB
+Cloud    : Azure AKS + Functions
+
+Additional capabilities integrated into the stack include RESTful API gateway, OAuth 2.0 authentication and cloud-based CI/CD pipeline. These features elevate the technical difficulty to 'Intermediate' and are reflected in the effort estimation multiplier.
+
+7. Risk & Requirement Volatility
+
+The overall risk level for this project is assessed as 'High', and requirement volatility is rated 'High'. Stakeholder priorities are expected to shift during the course of the project, which may lead to backlog re-prioritisation and scope adjustments across sprints. 
+
+Key risks identified:
+  - Regulatory changes may necessitate significant architecture redesign.
+  - High requirement volatility from multiple stakeholder groups.
+  - Integration with legacy systems carries substantial technical debt.
+  - Data-privacy regulations may impose additional encryption and audit requirements mid-project.
+
+Mitigation strategies adopted by the team:
+  - Keep a 15% time buffer in each sprint for unplanned work.
+  - Automate regression tests to catch breakages from dependency updates.
+  - Schedule knowledge-transfer sessions to reduce bus-factor risk.
+  - Implement feature flags to isolate risky changes behind toggles.
+
