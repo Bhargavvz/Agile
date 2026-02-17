@@ -202,7 +202,7 @@ class Trainer:
             features = batch["numeric_features"].to(self.device, non_blocking=True)
             targets = batch["target"].to(self.device, non_blocking=True)
 
-            with autocast(device_type="cuda", dtype=torch.bfloat16, enabled=config.USE_AMP):
+            with autocast("cuda", dtype=torch.bfloat16, enabled=config.USE_AMP):
                 mu, sigma = self.model(input_ids, attention_mask, features)
                 loss = self.criterion(mu, sigma, targets)
 
