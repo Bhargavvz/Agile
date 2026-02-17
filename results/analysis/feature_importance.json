@@ -1,0 +1,20 @@
+{
+  "duration_months": 0.023366209477186203,
+  "tech_stack_difficulty=Basic": 0.018719855464994908,
+  "tech_stack_difficulty=Advanced": 0.018234642148017885,
+  "risk_level=High": 0.017300553187727927,
+  "team_size": 0.016124209433794022,
+  "requirement_volatility_score=Low": 0.01596257331967354,
+  "risk_level=Low": 0.015299567312002183,
+  "tech_stack_difficulty=Intermediate": 0.01482539614289999,
+  "velocity_per_sprint": 0.013692475944757462,
+  "complexity_level=High": 0.013480557523667813,
+  "avg_story_points": 0.01267864390462637,
+  "complexity_level=Low": 0.012205936685204507,
+  "requirement_volatility_score=High": 0.011810838341712952,
+  "num_sprints": 0.01152053365856409,
+  "risk_level=Medium": 0.010665944293141365,
+  "total_user_stories": 0.010576518759131431,
+  "requirement_volatility_score=Medium": 0.010410877637565137,
+  "complexity_level=Medium": 0.009901953279972077
+}
