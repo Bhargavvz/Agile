@@ -335,11 +335,14 @@ class Trainer:
                           f"(no improvement for {config.EARLY_STOPPING_PATIENCE} epochs)")
                     break
 
-        # save history
+        # save history — convert numpy floats to Python floats for JSON
         os.makedirs(config.RESULTS_DIR, exist_ok=True)
         history_path = os.path.join(config.RESULTS_DIR, "training_history.json")
+        serialisable = {
+            k: [float(v) for v in vals] for k, vals in self.history.items()
+        }
         with open(history_path, "w") as f:
-            json.dump(self.history, f, indent=2)
+            json.dump(serialisable, f, indent=2)
         print(f"\n  📊 Training history saved → {history_path}")
 
         # final summary
