@@ -1,0 +1,28 @@
+.results-page .plots-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+    margin-bottom: 48px;
+}
+
+.plot-card {
+    padding: 16px;
+}
+
+.plot-label {
+    margin-top: 12px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--text-secondary);
+    text-align: center;
+}
+
+.analysis-section {
+    margin-top: 48px;
+}
+
+@media (max-width: 768px) {
+    .plots-grid {
+        grid-template-columns: 1fr;
+    }
+}

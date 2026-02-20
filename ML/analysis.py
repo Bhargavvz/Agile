@@ -21,7 +21,7 @@ import seaborn as sns
 import torch
 from torch.cuda.amp import autocast
 
-import ML.config
+from ML import config
 from ML.dataset import AgileCostDataset, get_dataloaders
 from ML.model import AgileCostEstimator
 

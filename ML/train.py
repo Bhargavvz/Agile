@@ -30,7 +30,7 @@ from torch.cuda.amp import GradScaler
 from torch.optim import AdamW
 from torch.optim.lr_scheduler import LambdaLR
 
-import ML.config
+from ML import config
 from ML.dataset import AgileCostDataset, get_dataloaders
 from ML.model import AgileCostEstimator, GaussianNLLLoss
 
